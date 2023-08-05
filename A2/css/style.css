@@ -1,24 +1,44 @@
 body {
-    background:violet;
+    background:rgb(0,3,12);
 }
 
-.page{width:80vw;height:80vh;border:5px solid orange}
-nav ul li{display:inline;}
-#page1{background:red;
-    position: relative;}
-#page2{background:green;
-    position: relative;}
-#page3{background:blue;
-    position: relative;}
-
+/*CUBE FOR PIXEL ART PAINTING*/
 .cube{
-    background-color:rgb(0,0,0);
-    width: 75px;
-    height: 75px;
-    
+    background-color:rgb(255, 255, 255);
+    width: 25px;
+    height: 25px;
+
+    padding: 0;
     margin:0;
-    padding:0;
+
+    border: 2px dashed black;
 }
+
+/*COLOUR PICKERS*/
+.colour_picker {
+    width: 25px;
+    height: 25px;
+
+    padding: 0;
+    margin:0;
+}
+#red_colour_picker {
+    background-color:rgb(255, 0, 0);
+}
+#green_colour_picker {
+    background-color:rgb(0, 255, 0);
+}
+#blue_colour_picker {
+    background-color:rgb(0, 0, 255);
+}
+#darken_colour_picker {
+    background-color:rgb(0, 0, 0);
+}
+#white_colour_picker {
+    background-color:rgb(178, 178, 178);
+}
+/**/
+
 
 .break_row {
     flex-basis: 100%;
@@ -33,16 +53,6 @@ nav ul li{display:inline;}
 }
 
 
-/*
-TEST
-TEST
-TEST
-TEST
-TEST
-*/
-
-
-
 /* General setting for everything */
 *{
     padding: 0;
@@ -54,25 +64,10 @@ TEST
     /*SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif*/
 }
 
-table{
-    border-collapse: collapse;
-
-    width:40%;
-    height:20%;
-}
-
-table, th, td{
-    border: 2px solid black;
-    /*Margin to align them to the center*/
-    margin-left: auto;
-    margin-right: auto;
-}
-
 html, body{
     padding: 0;
     margin:0;
 }
-
 
 p, span{font-size: 18px;}
 h1     {font-size: 42px;}
@@ -83,35 +78,35 @@ h5     {font-size: 26px;}
 h6     {font-size: 22px;}
 
 
-
-
 /* Applying background for navigation bar */
 header{
-    /* background-image: url("../img/Background\ -\ Main.jpg") !important;*/
-    background-image: url("../images/background/journey.jpg") !important;
-    width:100%;
+    height: 0; /*Let image start from the top*/
+    width: 100%;
 
-    position:fixed;
+    position:relative; /*stick to screen*/
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     z-index: 10;
+
+    background-color: black;
 }
+
 
 nav{
     flex: 1;
 }
 
+
 /* Placing of items in the navigation container */
 .nav-con{
-    background-color: grey;
+    /*background-color: rgba(120, 120, 120, 0.456);*/
+    background-color: rgba(255, 255, 255, 0);
     display: flex; 
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
     justify-content: space-between;
-    align-items: left;
-    padding:0 20px 0 40px; 
-
+    /*padding:0 20px 0 40px; */
 }
 
 /* Tweak and edit sizes and placement of items and space within the navigation bar */
@@ -119,106 +114,265 @@ nav ul{
     list-style-type: none;
     display:flex;
     flex-wrap:wrap;
-    text-align: center;
+    text-align: right;
     font-family: 'Poor Richard';
     width:100%;
-    justify-content: center;
+    height: auto;
+    justify-content: right;
     align-items: center;
-
-   
 }
 
-nav ul a{
+nav ul p{
     font-size:20px;
-    width:max-content;
+    
     color:white;
     text-decoration: none;
+
     padding:38px 48px;
+    /*
+    width:max-content;
+    */
 
     font-weight: bold;
     justify-content: center;
+    
 }
 /* Ensure :hover color stays when hovering over other dropdown areas */
-nav ul a:hover, .Nav-drop:hover .Drop{
+nav ul p:hover {
     color:black;
 
     background-color: rgb(255, 255, 255);
     text-decoration: underline;
 }
-
-/* Hover-Drop */
-.Drop{
-    display:inline-block;
-}
-
-.Drop-content {
-    display: none;
-    position: absolute;
-    background-color: rgb(255, 255, 255);
-    min-width: 10%;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 20;
-
-}
   
-.Drop-content a {
-    color: black;
-    width:100%;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-  
-.Drop-content a:hover {
-    color:black;
-    background-color: rgb(228, 228, 228);
-    font-weight: bold;
-    text-decoration: underline;
-}
-  
-.Nav-drop:hover .Drop-content{
+.Nav-drop:hover {
     background-color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
     justify-content:flex-start;
 }
 
+/*HAMBURGER ICON*/
+#hamburger {
+    position:relative;
+    display: none;
 
-/*Hero section's title (Quote)*/
-.heroInner .heroPhrase {
-    border-left: 3px solid #a38072;
-    padding-left: 30px;
-    margin-right: 30%;
+    padding: 1vh;
+    border: 1px grey;
 
+    width:6vh;
+
+    background-color: black;
+}
+
+#hamburger .bar {
+    width: 100%;
+    height: 5px;
+
+    display: block;
+    background-color: aliceblue;
+    margin: 6px 0px;
+
+    transition: 0.4s;
+}
+
+#hamburger.is-active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-8px, 6px);
+}
+#hamburger.is-active .bar:nth-child(2) {
+    opacity: 0;
+}
+#hamburger.is-active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-9px, -8px);
+}
+
+@media screen and (max-width:800px){
+    #hamburger {display:block;}/*unhide menu icon*/
+    nav ul {display:none;}/*Hide the menu item list*/
+
+    nav ul li {
+        display: block;
+        background-color: black;
+        width: 100%;
+    }/*Make a menu items verticals*/
+}
+.menuHide{
+    display: block;
+}
+
+/*Animations for colour Hues*/
+.colour-scheme{
+    width: 10vw;
+    height: 10vw;
+
+    flex:1;
+
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+#monochromatic1 {
+    background-color: rgb(255, 206, 206);
+    animation-name: monochromatic1;
+}
+#monochromatic2 {
+    background-color: rgb(255, 206, 206);
+    animation-name: monochromatic2;
+}
+#monochromatic3 {
+    background-color: rgb(255, 206, 206);
+    animation-name: monochromatic3;
+}
+@keyframes monochromatic1 {
+    0% {background-color: rgb(255, 147, 147);}
+    25% {background-color: rgb(242, 255, 147);}
+    50% {background-color: rgb(147, 255, 215);}
+    75% {background-color: rgb(217, 147, 255);}
+    100% {background-color: rgb(255, 147, 147);}
+}
+@keyframes monochromatic2 {
+    0% {background-color: rgb(255, 0, 0);}
+    25% {background-color: rgb(212, 255, 0);}
+    50% {background-color: rgb(0, 255, 140);}
+    75% {background-color: rgb(212, 0, 255);}
+    100% {background-color: rgb(255, 0, 0);}
+}
+@keyframes monochromatic3 {
+    0% {background-color: rgb(83, 0, 0);}
+    25% {background-color: rgb(65, 83, 0);}
+    50% {background-color: rgb(0, 83, 46);}
+    75% {background-color: rgb(65, 0, 83);}
+    100% {background-color: rgb(83, 0, 0);}
+}
+
+#analogous1 {
+    background-color: rgb(255, 0, 149);
+    animation-name: analogous1;
+}
+#analogous2 {
+    background-color: rgb(255, 0, 0);
+    animation-name: analogous2;
+}
+#analogous3 {
+    background-color: rgb(255, 115, 0);
+    animation-name: analogous3;
+}
+@keyframes analogous1 {
+    0% {background-color: rgb(255, 0, 149);}
+    20% {background-color: rgb(255, 0, 0);}
+    40% {background-color: rgb(255, 153, 0);}
+    60% {background-color: rgb(195, 255, 0);}
+    80% {background-color: rgb(43, 255, 0);}
+    100% {background-color: rgb(255, 0, 149);}
+}
+@keyframes analogous2 {
+    0% {background-color: rgb(255, 0, 0);}
+    20% {background-color: rgb(255, 153, 0);}
+    40% {background-color: rgb(195, 255, 0);}
+    60% {background-color: rgb(43, 255, 0);}
+    80% {background-color: rgb(0, 255, 225);}
+    100% {background-color: rgb(255, 0, 0);}
+}
+@keyframes analogous3 {
+    0% {background-color: rgb(255, 115, 0);}
+    20% {background-color: rgb(195, 255, 0);}
+    40% {background-color: rgb(43, 255, 0);}
+    60% {background-color: rgb(0, 255, 225);}
+    80% {background-color: rgb(0, 102, 255);}
+    100% {background-color: rgb(255, 115, 0);}
+}
+
+#complementary1 {
+    background-color: rgb(255, 0, 0);
+    animation-name: complementary1;
+}
+#complementary2 {
+    background-color: rgb(0, 255, 42);
+    animation-name: complementary2;
+}
+@keyframes complementary1 {
+    0% {background-color: rgb(255, 0, 0);}
+    20% {background-color: rgb(255, 145, 0);}
+    40% {background-color: rgb(229, 255, 0);}
+    60% {background-color: rgb(0, 255, 42);}
+    80% {background-color: rgb(0, 255, 247);}
+    100% {background-color: rgb(255, 0, 0);}
+}
+@keyframes complementary2 {
+    0% {background-color: rgb(0, 255, 42);}
+    20% {background-color: rgb(0, 255, 247);}
+    40% {background-color: rgb(123, 0, 255);}
+    60% {background-color: rgb(255, 0, 0);}
+    80% {background-color: rgb(255, 145, 0);}
+    100% {background-color: rgb(0, 255, 42);}
+}
+
+#triadic1 {
+    background-color: rgb(255, 0, 149);
+    animation-name: triadic1;
+}
+#triadic2 {
+    background-color: rgb(255, 0, 0);
+    animation-name: triadic2;
+}
+#triadic3 {
+    background-color: rgb(255, 115, 0);
+    animation-name: triadic3;
+}
+@keyframes triadic1 {
+    0% {background-color: rgb(255, 255, 0);}
+    20% {background-color: rgb(43, 255, 0);}
+    40% {background-color: rgb(0, 119, 255);}
+    60% {background-color: rgb(208, 0, 255);}
+    80% {background-color: rgb(255, 0, 0);}
+    100% {background-color: rgb(255, 255, 0);}
+}
+@keyframes triadic2 {
+    0% {background-color: rgb(255, 0, 0);}
+    20% {background-color: rgb(255, 153, 0);}
+    40% {background-color: rgb(255, 255, 0);}
+    60% {background-color: rgb(43, 255, 0);}
+    80% {background-color: rgb(0, 119, 255);}
+    100% {background-color: rgb(255, 0, 0);}
+}
+@keyframes triadic3 {
+    0% {background-color: rgb(0, 119, 255);}
+    20% {background-color: rgb(208, 0, 255)}
+    40% {background-color: rgb(255, 0, 0);}
+    60% {background-color: rgb(255, 153, 0);}
+    80% {background-color: rgb(255, 255, 0);}
+    100% {background-color: rgb(0, 119, 255);}
+}
+
+/*HERO TEXT & BANNER*/
+.hero-banner {
+    text-align: right;
     position: relative;
+    /*position: absolute;*/
+    top: 40vh;
+    right: 3vh;
 
-    background-color:rgba(80, 80, 80, 0.29);
-    background-blend-mode: multiply;    
+    color: white;
+
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s, transform 1s;
 }
 
-.heroInner .heroTitle.in {
-    transform: translateY(0);
-    transition: ease-out 1s;
+/*Applied to the banner-text to make it fade in*/
+.fade-in {
     opacity: 1;
-    transition-delay: 0.3s;
+    transform: translateY(0); /*Translate itself to original position*/
 }
-
-.heroInner .heroTitle {
-    color: #fff;
-    font-family: 'Lovelace-300';
-
-    font-weight: 300;
-    text-align: left;
-}
-
-
 
 
 /**/
 .break_row{
     flex-basis: 100%;
     height: 0;
+}
+.break_column{
+    flex-basis: 100%;
+    width: 0;
 }
 
 img.background{
@@ -230,7 +384,7 @@ img.background{
     z-index: -1;
 }
 
-#content {
+.content {
     display:flex;
     flex-wrap: wrap;
 
@@ -238,70 +392,108 @@ img.background{
     padding-bottom: 5%;
     /*border: 4px solid black;*/
 
-    padding-left: 6vh;
-    padding-right: 6vh;
+    width: auto;
 }
 
-#content div.empty{
+.content div.empty{
     flex:1;
     min-height: 200px;
 
-    background-color: none;
+    flex-basis: 100%;
+    border: 0px white;
+    
+}
+.content div.hero_empty{
+    flex:1;
+    min-height: 700px;
+
     flex-basis: 100%;
     border: 0px white;
     
 }
 
-
-
-#content div.flex, #content div.flextext, #content div.flextext_borderless {
+.content div.flex, .content div.flextext, .content div.flextext_borderless {
     flex:1;
-    border: 4px solid black;
-    background-color:rgb(137, 177, 177);
 
-    padding: 1vh 2.4vh; /*top/bottom, left/right*/
-    margin: 1vh 2vh; /*top/bottom, left/right*/
+    background-color:rgb(255, 255, 255);
+    color :#335165;
+
+    /*
+    padding: 1vh 2.4vh; top/bottom, left/right
+    margin: 1vh 2vh; top/bottom, left/right
+    */
+
+    padding: 8vh;
 
     text-align: center;
     justify-content: center;
 }
-#content div.flextext_borderless {
-    flex:1;
-    background-color:rgb(137, 177, 177);
-
+/*This has no padding/margin, meant for images*/
+.content div.flextext_borderless {
     border:none;
     padding: 0vh 0vh; /*top/bottom, left/right*/
     margin: 0vh 0vh; /*top/bottom, left/right*/
-
-    text-align: center;
-    justify-content: center;
 }
-#content div.flex {
+/*Has wrapping unlike flextext which is meant for span (no wrapping)*/
+.content div.flex {
     display: flex;
     flex-wrap: wrap;
 }
 
 
-/*
-#content div.flex img {
-    max-height:100%;
-    max-width:100%;
-    display:block;
-    position:relative;
+/*FOR THE STEP BY STEP PROCESS SECTION ON PAGE 1*/
+#illustration_process_box {
+    background: rgb(255, 255, 255);
+    padding: 4vw 8vw; /*top/bottom, left/right*/
+}
 
-    justify-content: center;
-    align-self:center;
+/*All elements inside the box*/
+#illustration_process_box * {
+    background: rgb(231, 196, 42);
+}
 
-}*/
+/*Button*/
+#illustration_process_box > .flextext_borderless > button{
+    background: rgb(135, 135, 135);
+    color:rgb(255, 255, 255);
+
+    width: 20vw;
+    height: 8vw;
+
+    min-width: 50px;
+    min-height: 20px;
+
+    margin: 2vh 0;/*top/bottom, left/right*/
+
+    font-size: 22px; /*Button text size*/
+
+}
+/*Button Hover*/
+#illustration_process_box > .flextext_borderless > button:hover{
+    background: rgb(255, 255, 255);
+    color:rgb(0, 0, 0);
+}
+/*progress bar*/
+#illustration_process_box .progressbar_outer {
+    background: rgb(98, 98, 98);
+
+    height: 6vh;
+    padding: 1vh;
+}
+#illustration_process_box .progressbar_inner {
+    background: rgb(58, 232, 75);
+
+    width: 0%; /*0% progress initally, will be altered in JS*/
+    height: 4vh;
+}
 
 figure img {
     max-width: 100%;
     max-height: 100%;
 }
 
-
-
 /*Scroll Menu DisplayFlex*/
+/*
 div.scrollmenu {
     background-color: #333;
     overflow: auto;
@@ -318,11 +510,13 @@ div.scrollmenu div{
 
     position: relative;
     width:100%;
-}
+}*/
 
-div.scrollmenu div img{
     /*The 3 magical properties*/
     /*object-fit: cover;*/
+/*
+div.scrollmenu div img{
+
     width:auto;
     height: 50vh;
 }
@@ -340,22 +534,21 @@ div.scrollmenu div.text{
 }
 div.scrollmenu div.text h1{
     color:aliceblue;
-}
+}*/
 
 /*END Scroll Menu DisplayFlex*/
 
 /*Scroll Menu DisplayGrid*/
 
+/*
 div.grid_container {
     background-color: #333;
 
     display: grid;
-    /*grid-auto-columns: calc(100% - 4rem);*/
     grid-auto-flow: column;
     grid-gap: 16px;
     overflow-x: auto;
 
-    /*2 rows*/
     grid-template-rows: 2;
     
 }
@@ -378,13 +571,14 @@ div.grid_container div div.bottom{
 
 div.grid_container div img{
     height: 50vh;
-}
+}*/
 
 /*END Scroll Menu DisplayGrid*/
 
 
 
 /*Scroll Menu Vertical FlexGrid*/
+/*
 div.scrollmenu_vertical {
     background-color: #333;
     overflow-y: scroll;
@@ -399,9 +593,10 @@ div.scrollmenu_vertical {
     padding: 20px 10px;
     
 
-    /*scrollbar-gutter: stable both-edges;*/
-}
-
+   
+}*/
+ /*scrollbar-gutter: stable both-edges;*/
+/*
 div.scrollmenu_vertical div{
     border:2px solid black;
     background-color: aliceblue;
@@ -456,7 +651,7 @@ div.scrollmenu_vertical div div.description{
 
     height:auto;
 }
-
+*/
 /*END Scroll Menu Vertical FlexGrid*/
 
 /*Flip cards*/
@@ -466,7 +661,7 @@ div.scrollmenu_vertical div div.description{
     height: 30rem;
 
     margin:4vh;
-  }
+}
   
 .flip-card-inner {
     position: relative;
@@ -476,9 +671,9 @@ div.scrollmenu_vertical div div.description{
     transition: transform 0.6s;
     transform-style: preserve-3d;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  }
+ }
   
-.flip-card:hover .flip-card-inner {
+.flip-card.is-flipped .flip-card-inner {
     transform: rotateY(180deg);
 }
   
@@ -488,9 +683,22 @@ div.scrollmenu_vertical div div.description{
     height: 100%;
     width: 100%;
 
+    /*
     -webkit-backface-visibility: hidden;
+    */
+    
     backface-visibility: hidden;
 
+}
+/*Content inside flipcard*/
+.flip-card-front > div, .flip-card-back > div {
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+
+.flip-card-front > div > * {
+    text-align: center;
 }
 
 .flip-card-front img{
@@ -572,21 +780,17 @@ animation: spinning;
 
 /*END COllapsible*/
 
-
-
+/*
 footer{
     background-color: darkslategrey;
     padding:3% 3%;
 
     color: white;
     
-    /*To keep it at the bottom*/
-    width:100%;
+    width:100%; 
     height: 25vh;
     overflow: hidden;
 }
-
-
 footer img.logo{
     float:left;
 
@@ -596,12 +800,13 @@ footer img.logo{
     height: 8vh;
     width: 8vh;
 }
+*/
 
 /*APPLY TO BOTH TABLET AND MOBILES */
 @media screen and (max-width: 800px){
     /*To Always show flip card front*/
     /*Make all arrange in column*/
-    #content div.flex, #content div.flextext, #content div.flextext_borderless{
+    .content div.flex, .content div.flextext, .content div.flextext_borderless{
         flex-basis: 100%;
     }
 
@@ -615,18 +820,22 @@ footer img.logo{
         display:none;
     }
 
+    /*
     img {
         touch-action: pinch-zoom;
     }
+    */
 
     /*Hero section's title (Quote), Move further down*/
+    /*
     .heroInner .heroPhrase {
         padding-left: none;
         margin-right: none;
         margin-top: 20%;;
     }
+    */
 
-    /*DISABLE HOVER for flip card*/
+    /*DISABLE HOVER for flip card
     .flip-card:hover .flip-card-inner {
         transform: none;
     }
@@ -634,6 +843,7 @@ footer img.logo{
         transform:none;
         z-index: 1;
     }
+    */
 
     /*To enlarge flip-card*/
     .flip-card{
@@ -645,6 +855,7 @@ footer img.logo{
     }
 
     /*SCroller turn to flex display*/
+    /*
     div.scrollmenu {
         height: auto;
         width: 150%;
@@ -660,6 +871,7 @@ footer img.logo{
     
         justify-content: left;
     }
+    
 
     div.scrollmenu div {
         margin: 1px 2px;
@@ -675,6 +887,7 @@ footer img.logo{
     div.scrollmenu_vertical * {
         font-size:medium;
     }
+    */
 
     
 }
@@ -686,15 +899,6 @@ footer img.logo{
         padding-left: 0;
         padding-right: 0;
     }
-
-    /*Hero section's title (Quote), Move further down*/
-    .heroInner .heroPhrase {
-        padding-left: none;
-        margin-right: none;
-        margin-top: 40%;;
-    }
-
-    
 }
 
 
