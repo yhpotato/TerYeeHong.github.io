@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ter Yee Hong - Level Design Projects</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <!-- Section 1(Navigation) -->
+    <!-- Navigation bar section -->
+    <header>
+        <nav class="nav-con">
+          <ul>
+            <li class="Nav-drop">
+              <a href="#" class="Drop">About Me</a>
+              <div class="Drop-content">
+                  <a href="./index.html#introduction">Introduction</a>
+                  <a href="./index.html#studies">Studies</a>
+                  <a href="./index.html#aspirations">Aspirations</a>
+              </div>
+            </li>
+            <li class="Nav-drop">
+              <a href="#" class="Drop">Works</a>
+              <div class="Drop-content">
+                  <a href="./works_unitygamedev.html">Unity</a>
+                  <a href="./works_shader.html">Shader</a>
+                  <a href="./works_openglgamedev.html">OpenGL</a>
+                  <a href="./works_networking.html">Networking</a>
+                  <a href="./works_leveldesign.html">Level Design</a>
+              </div>
+            </li>
+            <li class="Nav-drop">
+              <a href="#" class="Drop">Experiences</a>
+              <div class="Drop-content">
+                  <a href="./experiences_gamedev.html">Game Development</a>
+              </div>
+            </li>
+          </ul>
+        </nav>          
+      </header>
+    <p class="break_row"></p>
+
+    <!--Background image AKA Hero BG Start here
+    -->
+
+    <div id="pagecontainer">
+        <!-- ______ -->
+        <!-- PAGE 1 -->
+        <!-- ______ -->
+        <div class="page" id="page1">
+
+            <!--Content starts here--> 
+            <div class="content">
+                <!--Heading-->
+                <div id="start" class="flex">
+                    <h5><b>These are a list of my Game Projects made with Unity</b></h5>
+                </div>
+
+                <p class="break_row"></p>
+                <div class="flextext">
+                    <a href="#mario_editor_level2"><h6>Mario Editor Level 2</h6></a> <br>
+                    <a href="#3dlevel"><h6>FPS 3D level</h6></a> <br>
+                </div>
+                <p class="break_row"></p>
+
+                <!-- split for next section-->
+                <div id="mario_editor_level2" class="empty"></div>
+
+                <!--Heading-->
+                <div class="flex">
+                    <h2><b>Mario Editor Level 2</b></h2>
+                    <p class="break_row"></p>
+                    <br>
+                    <a href="https://youtu.be/ezhHJxlGqjw" target="_blank">
+                        <h6>Watch Explanation behind level design</h6>
+                    </a>
+                    <p class="break_row"></p>
+                    <a href="https://forms.gle/7jiQ8ymprMG14NXy6" target="_blank">
+                        <h6>Playtest survey</h6>
+                    </a>
+                </div>
+                <p class="break_row"></p>
+
+                <!---->
+                <div class="flextext_borderless">
+                    <figure>
+                        <img src="images/works_LevelDesign/mariolevel2_1.png" alt ="mariolevel2_1 screenshot">
+                        <figcaption>End section where player is running for his life</figcaption>
+                    </figure>
+                </div>
+                <div class="flextext">
+                    <h3>About</h3>
+                    <span></span>
+                    <p><b>Purpose :</b> 2D level design for platformers </p>
+                    <p><b>Team :</b> 1 people </p>
+                    <p><b>Software :</b> Mario Editor</p>
+
+                    <br>
+                    <span>A school assignment, this is 1 of 3 levels that I designed using Mario maker. </span>
+                    <span>In this level, we were tasked to introduce a new power up and designed a mario level that is around 3 minutes. </span>
+                    <span>This was also supposed to be the final level, meaning it had to be the most difficult among the 3 levels. </span>
+
+                    <br><br>
+                    <span>With all this in mind, I planned my level and introduced new challenging enemies that would synergise with </span>
+                    <span>the new power up mechanics that i was going to teach. </span>
+                    <span>I spaced the level, ensuring there are downtimes for the player to rest after completing challenges. </span>
+                    <span>There were about 10 iterations of the level at the very least after I collected playtest results and feedback on my players. </span>
+                </div>
+                <p class="break_row"></p>
+
+                <!--split-->
+                <div class="flextext">
+                    <h3>Design Intentions</h3>
+                    <span>The power allows the player to turn into a shell when ducking. </span>
+                    <span>At the first area where I introduce the power up, I force the player to duck, teaching them how to use it. </span>
+                    <span>The shell also makes the player invulnerable to damage hence the spikes, and it also permanently kill undead enemies. </span>
+                    <span>In this level, I introduce enemies that are immune to stomping, further bringing out the utility of this power up. </span>
+                </div>
+                <div class="flextext_borderless">
+                    <figure>
+                        <img src="images/works_LevelDesign/mariolevel2_2.png" alt ="mariolevel2_2 screenshot">
+                        <figcaption>first section where the shell power up is introduced</figcaption>
+                    </figure>
+                </div>
+                <p class="break_row"></p>
+
+                <!--split-->
+                <div class="flextext_borderless">
+                    <figure>
+                        <img src="images/works_LevelDesign/mariolevel2_3.png" alt ="mariolevel2_2 screenshot">
+                        <figcaption>challenge with falling spikes and moving ground</figcaption>
+                    </figure>
+                </div>
+                <div class="flextext">
+                    <h3>Design Intentions</h3>
+                    <span>My first challenge has the player walking on conveyer belts, a ground that can move the player, </span>
+                    <span>while dodging falling spikes from above and undead enemies. </span>
+                    <span>In the reference image, I layed 2 paths for the player, one path is a straight line </span>
+                    <span>that the player can just roll through spikes if they have the power up. </span>
+                    <span>The second route has the player to need to jump up and dodge the enemy. </span>
+                    <span>Through my playtests, this has a very satisfying feeling to the players. </span>
+                </div>
+                <p class="break_row"></p>
+
+                 <!--split-->
+                <div class="flextext_borderless">
+                    <figure>
+                        <img src="images/works_LevelDesign/mariolevel2_4.png" alt ="mariolevel2_2 screenshot">
+                        <figcaption>start of the final section</figcaption>
+                    </figure>
+                </div>
+                <div class="flextext">
+                    <h3>Design Intentions</h3>
+                    <span>At the start of the final section, the player will have 3 giant boos chasing them right when </span>
+                    <span>they spawn through the door. They are given a few seconds of reaction time to move and touch the checkpoint </span>
+                    <span>and the boos prevents them from going back, making it like a high speed chase for the player. </span>
+                    <span>This would give the player an andrenaline rush for the final section. </span>
+                
+                    <br><br>
+                    <span>Increasing the challenge as the player gets more familiar with the game mechanics are good use of Flow. </span>
+                    <span>From my playtests, the players are especially more engaged in this final section just with the 3 boos chasing them. </span>
+                    <span>The 3 boos does not increase the difficulty by a lot as players are already familiar with dodging them. </span>
+                    <span>These kind of chase has an unseen timer effect on the player as any sloppy and slow movements will be punished. </span>
+                </div>
+                <p class="break_row"></p>
+
+                <!--split-->
+                <div class="flextext_borderless">
+                    <figure>
+                        <img src="images/works_LevelDesign/mariolevel2_5.png" alt ="mariolevel2_2 screenshot">
+                        <figcaption>twist using conveyer belt, boo mechanic and boo circle</figcaption>
+                    </figure>
+                </div>
+                <div class="flextext">
+                    <h3>Design Intentions</h3>
+                    <span>This is one of my more challenging twists near the end of the level.  </span>
+                    <span>The boo circle rotates in a loop, the player has to time their jump to get in and out of the circle. </span>
+                    <span>While inside the circle, there is a conveyer belt pushing the player forward off the cliff. </span>
+                    <span>Hence, to not fall off, the player has to move backwards. However, each time they move backwards, the giant boo </span>
+                    <span>will get closer and closer to the player. </span>
+                    <span>The player has to find the timing to jump out of the boo circle as swiftly as possible before the Giant Boo gets them. </span>
+                    <br><br>
+                    <span>However, one unintended player action I recorded from playtest is that some players will just ignore the timing </span>
+                    <span>and speed through this section taking one damage. This is because players have 3 hearts and have seconds of immunity when they take damage. </span>
+                    <span>Perhaps one improvement would be to place this section at the end of the level, so that players that have already taken damage, cannot risk to speed through this and ignore the challenge. </span>
+                    
+                </div>
+                <p class="break_row"></p>
+
+
+
+                <!-- split for next section-->
+                <div id="3dlevel" class="empty"></div>
+
+                <!--Heading-->
+                <div class="flex">
+                    <h2><b>FPS 3D Level</b></h2>
+                    <p class="break_row"></p>
+                    <br>
+                    <a href="https://youtu.be/9xy4TuUtm8k?si=N8FcQIlMM58SAZrJ" target="_blank">
+                        <h6>Watch Explanation behind level design</h6>
+                    </a>
+                    <p class="break_row"></p>
+                    <a href="https://forms.gle/rnCBVRvvN9UxHncB7" target="_blank">
+                        <h6>Playtest survey</h6>
+                    </a>
+                    
+                </div>
+                <p class="break_row"></p>
+
+                <!---->
+                <div class="flextext_borderless">
+                    <figure>
+                        <img src="images/works_LevelDesign/3dlevel_1.png" alt ="3dlevel screenshot">
+                        <figcaption>Player holding a laser gun</figcaption>
+                    </figure>
+                </div>
+                <div class="flextext">
+                    <h3>About</h3>
+                    <span></span>
+                    <p><b>Purpose :</b> 3D level design for First Person Shooter Games </p>
+                    <p><b>Team :</b> 1 people </p>
+                    <p><b>Software :</b> Unreal Engine</p>
+
+                    <br>
+                    <span>A school assignment where we had to introduce 1 weapon in this level. </span>
+                    <span>Compared to 2D level design, 3D design now requires good use of camera and lighting to direct the player and </span>
+                    <span>evoke emotions within the player. In the FPS genre, covers are important to shield player from harm which can encourage actions </span>
+                    <span>to seek covers. </span>
+
+                    <span>I learnt the use of positive and negative spaces to draw out important objects to direct the player, </span>
+                    <span>space design too can have a big impact of player's actions: a narrow and cramped space fits horror themed games, where large open areas </span>
+                    <span>can give players a sense of vulnerability if they cannot hide from dangerous enemies. </span>
+                </div>
+                <p class="break_row"></p>
+
+                <!--split-->
+                <div class="flextext">
+                    <h3>Planning</h3>
+                    <span>I will be using my layout plan to explain my design intentions as they can illustrate better than screenshots of the game. </span>
+                    <span>This is my legend and my planned difficulty curve for the level. </span>    
+                </div>
+                <div class="flextext_borderless">
+                    <figure>
+                        <img src="images/works_LevelDesign/3dlevel_3.png" alt ="3dlevel screenshot">
+                        <figcaption>Legend of layout plan</figcaption>
+                    </figure>
+                </div>
+                <div class="flextext_borderless">
+                    <figure>
+                        <img src="images/works_LevelDesign/3dlevel_5.png" alt ="3dlevel screenshot">
+                        <figcaption>graph of difficulty curve</figcaption>
+                    </figure>
+                </div>
+                <p class="break_row"></p>
+
+                <!--split-->
+                <div class="flextext_borderless">
+                    <figure>
+                        <img src="images/works_LevelDesign/3dlevel_2.png" alt ="3dlevel screenshot">
+                        <figcaption>first section</figcaption>
+                    </figure>
+                </div>
+                <div class="flextext">
+                    <h3>Design Intentions</h3>
+                    <span>In the first section, player is equipped with a shotgun. Later, the player will obtain </span>
+                    <span>the laser gun, a long range weapon. I intentionally placed little covers and walls and many range enemies </span>
+                    <span>such that a short range weapon such as the shotgun will not be as effective so that I can highlight the main weapon later which is the laser. </span>
+                    <br><br>
+                    <span>The numbers represent the path which I intended for the player to take, </span>
+                    <span>moving from cover to cover and taking out the closest enemies along the way with the shotgun. </span>
+                </div>
+                <p class="break_row"></p>
+
+                 <!--split-->
+                <div class="flextext_borderless">
+                    <figure>
+                        <img src="images/works_LevelDesign/3dlevel_4.png" alt ="3dlevel screenshot">
+                        <figcaption>section where player will obtain the laser weapon</figcaption>
+                    </figure>
+                </div>
+                <div class="flextext">
+                    <h3>Design Intentions</h3>
+                    <span>Player starts at the bottom right. Upon entering the room, player will see 2 floors of this room. </span>
+                    <span>Top floor is filled with ranged enemies where as bottom floor is filled with slow melee enemies. </span>
+                    <span>This is to encourage player to defeat the ranged enemies at the top floor first so they can't shoot at the player </span>
+                    <span>at the player when he's at the bottom floor. </span>
+                    <span>To further make it more instinctive, a jump-pad is placed near the opening of the door for player to use to go up. </span>
+                    <span>Explosive barrels are placed around the corners of the covers to let the player lure and blow up groups of enemies. </span>
+                </div>
+                <p class="break_row"></p>
+
+                <!--split-->
+                <div class="flextext_borderless">
+                    <figure>
+                        <img src="images/works_LevelDesign/3dlevel_6.png" alt ="3dlevel screenshot">
+                        <figcaption>final section where player will board an airship to escape the heist</figcaption>
+                    </figure>
+                </div>
+                <div class="flextext">
+                    <h3>Design Intentions</h3>
+                    <span>After the player finally has the laser gun. Once again, I set up a open area filled with ranged enemies to utilise the power of the laser gun. </span>
+                    <span>The section is very long in length and filled with obstacles to prevent the player from taking out every enemy from the start. </span>
+                    <span>They have to travel from cover to cover, taking out enemies along the way. I also introduce a explosive robot enemy which blows up at close range, </span>
+                    <span>this makes the long range weapon more prefavourable. </span>                    
+                </div>
+                <p class="break_row"></p>
+
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="flextext">
+        <h3>Get in touch</h3>
+        <br>
+        <p><b>Email</b> : yhghostgame@gmail.com</p>
+        <p><b>Discord</b> : yhghost</p>
+        <br>
+        <!--
+        <img class="logo" src="./images/logo/twitter.png" alt="twitterlogo">
+        <img class="logo" src="./images/logo/youtube.jpg" alt="youtubelogo">
+        <img class="logo" src="./images/logo/instagram.png" alt="instagramlogo">
+        -->
+
+    </footer>
+</body>
+</html>

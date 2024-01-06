@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ter Yee Hong - Shader Projects</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <!-- Section 1(Navigation) -->
+    <!-- Navigation bar section -->
+    <header>
+        <nav class="nav-con">
+          <ul>
+            <li class="Nav-drop">
+              <a href="#" class="Drop">About Me</a>
+              <div class="Drop-content">
+                  <a href="./index.html#introduction">Introduction</a>
+                  <a href="./index.html#studies">Studies</a>
+                  <a href="./index.html#aspirations">Aspirations</a>
+              </div>
+            </li>
+            <li class="Nav-drop">
+              <a href="#" class="Drop">Works</a>
+              <div class="Drop-content">
+                  <a href="./works_unitygamedev.html">Unity</a>
+                  <a href="./works_shader.html">Shader</a>
+                  <a href="./works_openglgamedev.html">OpenGL</a>
+                  <a href="./works_networking.html">Networking</a>
+                  <a href="./works_leveldesign.html">Level Design</a>
+              </div>
+            </li>
+            <li class="Nav-drop">
+              <a href="#" class="Drop">Experiences</a>
+              <div class="Drop-content">
+                  <a href="./experiences_gamedev.html">Game Development</a>
+              </div>
+            </li>
+          </ul>
+        </nav>          
+      </header>
+    <p class="break_row"></p>
+
+    <!--Background image AKA Hero BG Start here
+    -->
+
+    <div id="pagecontainer">
+        <!-- ______ -->
+        <!-- PAGE 1 -->
+        <!-- ______ -->
+        <div class="page" id="page1">
+
+            <!--Content starts here--> 
+            <div class="content">
+                <!--Heading-->
+                <div id="start" class="flex">
+                    <h5><b>These are a list of my projects on Shaders/Graphics</b></h5>
+                </div>
+
+                <p class="break_row"></p>
+                <div class="flextext">
+                    <a href="#first_shader"><h6>First Shader Project</h6></a> <br>
+                </div>
+                <p class="break_row"></p>
+
+                <!-- split for next section-->
+                <div id="first_shader" class="empty"></div>
+
+                <!--Heading-->
+                <div class="flex">
+                    <h2><b>First Shader Project</b></h2>
+                    <p class="break_row"></p>
+                    <br>
+                    <a href="https://youtu.be/GyZasxwfdnk?si=sl-_qSmxqtCwAjpN" target="_blank">
+                        <h6>Watch Video explanation</h6>
+                    </a>
+                    <p class="break_row"></p>
+                    <a href="https://teryeehong.github.io/Shader_First/" target="_blank">
+                        <h6>Try the Scene on the Web!</h6>
+                    </a>
+                </div>
+                <p class="break_row"></p>
+
+                <!---->
+                <div class="flextext_borderless">
+                    <figure>
+                        <img src="images/works_Shader/FirstShader_5.png" alt ="Shader Project screenshot">
+                        <figcaption>Scene's First look</figcaption>
+                    </figure>
+                </div>
+                <div class="flextext">
+                    <h3>About</h3>
+                    <span></span>
+                    <p><b>Development time :</b> 3 weeks </p>
+                    <p><b>Team :</b> 1 people </p>
+                    <p><b>Software :</b> Unity</p>
+                    <p><b>Target Platform:</b> PC</p>
+
+                    <br>
+                    <span>This was an assignment by the school and also my first ever experience with shaders. </span>
+                    <span>Using Unity, we were to make shaders in HLSL, no shader graphs are used for this project. </span>
+                    <span>The assignment required us to make multiple textures, lightings, shadows from scratch. </span>
+                    <span>Things that I self learn out of scope includes, terrain scanning effect, voronoi noise for water, </span>
+                    <span>and I attempted to recreate the cell shading character shaders that Genshin Impact has. </span>
+
+                    <br> <br>
+                    <h6>How to use the Program</h6>
+                    <p> W - switch Camera</p>
+                    <p> Q - switch and compare Model</p>
+                    <p> A - activate Terrain scanning</p>
+                </div>
+                <p class="break_row"></p>
+
+                <!--split-->
+                
+                <div class="flextext">
+                    <h3>Cell Shading</h3>
+                    <span>I will be the first to admit, I could not recreate fully the shader that genshin used even </span>
+                    <span>after days and nights of binging tutorials and wrapping my head around the concept of cell shading. </span>
+                    <span>In the end, I have perhaps only 80% of the visual aesthetics. </span>
+                    <span>I have an outline shader, toon shader, directional shader casting on the face. </span>
+                    <span>But i could not replicate the curved shadow that characters can sometimes have on their face at certain angles. </span>
+                    <span>It needed to use a texture to map the curve shadow which I had but could not put it into use. </span>
+                    <span>Though, I am still quite proud of what I managed to achieve in the short time I had. </span>
+                </div>
+                <div class="flextext_borderless">
+                    <figure>
+                        <img src="images/works_Shader/FirstShader_2.png" alt ="shader project screenshot">
+                        <figcaption>How the model looks like using standard unity shader. </figcaption>
+                    </figure>
+                </div>
+                <div class="flextext_borderless">
+                    <figure>
+                        <img src="images/works_Shader/FirstShader_1.png" alt ="shader project screenshot">
+                        <figcaption>How the model looks like using my improvised cell shader.</figcaption>
+                    </figure>
+                </div>
+                <p class="break_row"></p>
+
+                <!--split-->
+                <div class="flextext_borderless">
+                    <figure>
+                        <img src="images/works_Shader/FirstShader_3.png" alt ="shader project screenshot">
+                        <figcaption>Lighting scene</figcaption>
+                    </figure>
+                </div>
+                <div class="flextext">
+                    <h3>Lighting and Shadows</h3>
+                    <span>Lighting and shadows was made from scratch by creating an imaginary light point in the shader script, </span>
+                    <span>then calculating the resultant albedo diffuse to achieve lighting and shadow effects. </span>
+                    <span>I managed to make multiple light sources and multiple shadows with reference to opengl lighting tutorials on youtube. </span>
+                </div>
+                <p class="break_row"></p>
+
+                 <!--split-->
+
+                <div class="flextext">
+                    <h3>Extra features</h3>
+                    <span>Some extra features that I was inspired to do includes the following. </span>
+                    <p><b>Water:</b> using voronoi noise</p>
+                    <p><b>Terrain Scanning:</b> seen in games such as Genshin Impact and Apex Legends, Bloodhound's ability.</p>
+
+                    <br>
+                    <span>Overall, This has been a great learning project. Initially I despised shaders as it seemed complicated </span>
+                    <span>and that you could not debug as the code is computed in the GPU. </span>
+                    <span>As of now, Shader has really piqued my interest and I definitely want to expand my knowledge in </span>
+                    <span>the field of game graphics and its possibilites. </span>
+                </div>
+                <div class="flextext_borderless">
+                    <figure>
+                        <img src="images/works_Shader/FirstShader_4.png" alt ="shader project screenshot">
+                        <figcaption>extra feature scene effect</figcaption>
+                    </figure>
+                </div>
+                <p class="break_row"></p>
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="flextext">
+        <h3>Get in touch</h3>
+        <br>
+        <p><b>Email</b> : yhghostgame@gmail.com</p>
+        <p><b>Discord</b> : yhghost</p>
+        <br>
+        <!--
+        <img class="logo" src="./images/logo/twitter.png" alt="twitterlogo">
+        <img class="logo" src="./images/logo/youtube.jpg" alt="youtubelogo">
+        <img class="logo" src="./images/logo/instagram.png" alt="instagramlogo">
+        -->
+
+    </footer>
+</body>
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ter Yee Hong - OpenGL Game Projects</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <!-- Section 1(Navigation) -->
+    <!-- Navigation bar section -->
+    <header>
+        <nav class="nav-con">
+          <ul>
+            <li class="Nav-drop">
+              <a href="#" class="Drop">About Me</a>
+              <div class="Drop-content">
+                  <a href="./index.html#introduction">Introduction</a>
+                  <a href="./index.html#studies">Studies</a>
+                  <a href="./index.html#aspirations">Aspirations</a>
+              </div>
+            </li>
+            <li class="Nav-drop">
+              <a href="#" class="Drop">Works</a>
+              <div class="Drop-content">
+                  <a href="./works_unitygamedev.html">Unity</a>
+                  <a href="./works_shader.html">Shader</a>
+                  <a href="./works_openglgamedev.html">OpenGL</a>
+                  <a href="./works_networking.html">Networking</a>
+                  <a href="./works_leveldesign.html">Level Design</a>
+              </div>
+            </li>
+            <li class="Nav-drop">
+              <a href="#" class="Drop">Experiences</a>
+              <div class="Drop-content">
+                  <a href="./experiences_gamedev.html">Game Development</a>
+              </div>
+            </li>
+          </ul>
+        </nav>          
+      </header>
+    <p class="break_row"></p>
+
+    <!--Background image AKA Hero BG Start here
+    -->
+
+    <div id="pagecontainer">
+        <!-- ______ -->
+        <!-- PAGE 1 -->
+        <!-- ______ -->
+        <div class="page" id="page1">
+
+            <!--Content starts here--> 
+            <div class="content">
+                <!--Heading-->
+                <div id="start" class="flex">
+                    <h5><b>These are a list of my Game Projects made with Unity</b></h5>
+                </div>
+
+                <p class="break_row"></p>
+                <div class="flextext">
+                    <a href="#winter_carnival"><h6>Winter Carnival</h6></a> <br>
+                    <a href="#hero_adventure"><h6>Hero Adventure</h6></a> <br>
+                    <a href="#3d_scene"><h6>3D Scene</h6></a> <br>
+                </div>
+                <p class="break_row"></p>
+
+                <!-- split for next section-->
+                <div id="winter_carnival" class="empty"></div>
+
+                <!--Heading-->
+                <div class="flex">
+                    <h2><b>Winter Carnival</b></h2>
+                    <p class="break_row"></p>
+                    <br>
+                    <a href="https://youtu.be/CGwbjO6w8Wo" target="_blank">
+                        <h6>Watch Trailer</h6>
+                    </a>
+                </div>
+                <p class="break_row"></p>
+
+                <!---->
+                <div class="flextext_borderless">
+                    <figure>
+                        <img src="images/works_OpenGL/winter_carnival_1.png" alt ="wintercarnival screenshot">
+                        <figcaption>Overworld Scene</figcaption>
+                    </figure>
+                </div>
+                <div class="flextext">
+                    <h3>About</h3>
+                    <span></span>
+                    <p><b>Genre :</b> Sandbox </p>
+                    <p><b>Development time :</b> 2 weeks </p>
+                    <p><b>Team :</b> 4 people </p>
+                    <p><b>Software :</b> Visual Studio</p>
+                    <p><b>Target Platform:</b> PC</p>
+
+                    <br>
+                    <span>I was the leader of the project and my contributions include </span>
+                    <span>the main scene, </span>
+                    <span>the base Physics framework which includes OBB and AABB collision detection, </span>
+                    <span>Character/Camera controls inspired by Genshin Impact, </span>
+                    <span>UI in main scene and optimisation algorithms.</span>
+                    <br>
+                    <br>
+                    <span>My main learning takeaways are the optimisation algorithms needed to maintain a good performance, </span>
+                    <span>There is over a 100 entites in the main scene, each with collision detection and response with one another, </span>
+                    <span>I used a bubble sort algorithm for the player to be able to pick up the closest item instead of looping through all entities. </span>
+                    <span>I also used an OpenGL technique where only objects in the camera frustum are rendered. </span>
+                </div>
+                <p class="break_row"></p>
+
+                <!--split-->
+                <div class="flextext">
+                    <h3>Game synopsis</h3>
+                    <span>The winter holidays are here!
+                        Experience a day at the fun fair,
+                        carnival games, food and fun, and
+                        interact with other visitors there </span>
+                </div>
+                <div class="flextext_borderless">
+                    <figure>
+                        <img src="images/works_OpenGL/winter_carnival_2.png" alt ="wintercarnival screenshot">
+                        <figcaption>carnival at sunset</figcaption>
+                    </figure>
+                </div>
+                <p class="break_row"></p>
+
+                <!--split-->
+                <div class="flextext_borderless">
+                    <figure>
+                        <img src="images/works_OpenGL/winter_carnival_3.png" alt ="wintercarnival screenshot">
+                        <figcaption>selfie with vending machine</figcaption>
+                    </figure>
+                </div>
+                <div class="flextext">
+                    <h3>How to play</h3>
+                    <p> - WASD </p>
+                    <p> - Mouse drag, scroll to look around, zoom </p>
+                    <p> - E to pick up items </p>
+                    <p> - Right click to throw items </p>
+                    <span> Walk around the carnival, look for games to play, there are a total of 3 mini games done by my team mates. </span>
+                    <span> However, time passes fast... soon, the sun will set and the day will end. </span>
+                </div>
+                <p class="break_row"></p>
+
+                 <!--split-->
+                 <div class="flextext_borderless">
+                    <figure>
+                        <img src="images/works_OpenGL/winter_carnival_4.png" alt ="wintercarnival screenshot">
+                        <figcaption>happy lumine holding a balloon</figcaption>
+                    </figure>
+                </div>
+                <div class="flextext_borderless">
+                    <figure>
+                        <img src="images/works_OpenGL/winter_carnival_5.png" alt ="wintercarnival screenshot">
+                        <figcaption>angry lumine charging up energy to toss balloon</figcaption>
+                    </figure>
+                </div>
+                <p class="break_row"></p>
+
+
+
+                  <!-- split for next section-->
+                  <div id="hero_adventure" class="empty"></div>
+
+                  <!--Heading-->
+                  <div class="flex">
+                      <h2><b>Hero Adventure</b></h2>
+                      <p class="break_row"></p>
+                  </div>
+                  <p class="break_row"></p>
+  
+                  <!---->
+                  <div class="flextext_borderless">
+                      <figure>
+                          <img src="images/works_OpenGL/hero_adventure_1.png" alt ="hero screenshot">
+                          <figcaption>level gameplay</figcaption>
+                      </figure>
+                  </div>
+                  <div class="flextext">
+                      <h3>About</h3>
+                      <span></span>
+                      <p><b>Genre :</b> Topdown 2D Action RPG </p>
+                      <p><b>Development time :</b> 10 weeks </p>
+                      <p><b>Team :</b> 1 people </p>
+                      <p><b>Software :</b> Visual Studio</p>
+                      <p><b>Target Platform:</b> PC</p>
+  
+                      <br>
+                      <span>a complete and polished 2D game made in OpenGL that was a school assignment. </span>
+                      <span>It consists of a player with 3 animations, 4 npcs, 4 weapons, 3 abilities, 2 AI enemies, 1 AI pet and 4 levels. </span>
+                      <span>Inventory system and UI is made using Imgui, Irrklang sound library for game bgm and sfx and other gameplay elements.</span>
+                      <br>
+                      <br>
+                      <span>My main learning was implementing physics in a 2D game, using libraries such as Irrklang, making AI, </span>
+                      <span>implementing spritesheet animations, singletons managers. </span>
+                  </div>
+                  <p class="break_row"></p>
+  
+                  <!--split-->
+                  <div class="flextext">
+                      <h3>Game synopsis</h3>
+                      <span>Bored of everyday life, you decide to go on an adventure around the world
+                        with your adorable pet fox. Solve puzzles, take down the angry cobra whose trying to bite you, 
+                        nap suspicious coins that just so happens to be on the ground, make new friends to learn their fighting style. 
+                      </span>
+                  </div>
+                  <div class="flextext_borderless">
+                      <figure>
+                            <img src="images/works_OpenGL/hero_adventure_5.png" alt ="hero screenshot">
+                            <figcaption>main menu, settings </figcaption>
+                      </figure>
+                  </div>
+                  <p class="break_row"></p>
+  
+                  <!--split-->
+                  <div class="flextext_borderless">
+                      <figure>
+                          <img src="images/works_OpenGL/hero_adventure_2.png" alt ="hero screenshot">
+                          <figcaption>inventory</figcaption>
+                      </figure>
+                  </div>
+                  <div class="flextext">
+                      <h3>How to play</h3>
+                      <p> - WASD </p>
+                      <p> - Mouse click to shoot </p>
+                      <p> - Q to use abilities </p>
+                      <span> Walk to the door to win the level, ricochet your spears to hit triggers to clear obstacles. </span>
+                      <span> Talk to an npc and gain their ability and weapon to replace your spears. </span>
+                  </div>
+                  <p class="break_row"></p>
+  
+                   <!--split-->
+                   <div class="flextext_borderless">
+                      <figure>
+                          <img src="images/works_OpenGL/hero_adventure_3.png" alt ="hero screenshot">
+                          <figcaption>ice level</figcaption>
+                      </figure>
+                  </div>
+                  <div class="flextext_borderless">
+                      <figure>
+                          <img src="images/works_OpenGL/hero_adventure_4.png" alt ="hero screenshot">
+                          <figcaption>fox being abandoned after player learns how to use portal gun</figcaption>
+                      </figure>
+                  </div>
+                  <p class="break_row"></p>
+
+
+                  <!-- split for next section-->
+                <div id="3d_scene" class="empty"></div>
+
+                <!--Heading-->
+                <div class="flex">
+                    <h2><b>3D scene</b></h2>
+                    <p class="break_row"></p>
+                </div>
+                <p class="break_row"></p>
+
+                <!---->
+                <div class="flextext_borderless">
+                    <figure>
+                        <img src="images/works_OpenGL/3d_scene_1.png" alt ="3dscene screenshot">
+                        <figcaption>Lumine in grassfield</figcaption>
+                    </figure>
+                </div>
+                <div class="flextext">
+                    <h3>About</h3>
+                    <span></span>
+                    <p><b>Genre :</b> Simulation </p>
+                    <p><b>Development time :</b> 4 weeks </p>
+                    <p><b>Team :</b> 1 people </p>
+                    <p><b>Software :</b> Visual Studio</p>
+                    <p><b>Target Platform:</b> PC</p>
+
+                    <br>
+                    <span>This project was a school assignment and also my first experience with 3D opengl. </span>
+                    <span>There was a lighting shader given to us, we just had to learn how to implement lighting into the scene. </span>
+                    <span>Things I learnt were Cubemaps for the scene Skybox, third person and first person camera control. </span>
+                    <span>Character/Camera control inspired by Genshin Impact, serializing obj, mtl and tga files</span>
+                    <span>and implementing the OpenGL render pipeline. </span>
+                </div>
+                <p class="break_row"></p>
+
+                <!--split-->
+                <div class="flextext">
+                    <h3>Game synopsis</h3>
+                    <span>It's getting dark, Grandpa wants you to pick up the lanterns that he hid in the chests. </span>
+                    <span>Get them back so you and Grandpa can see in the night. </span>
+                    <span>Be careful of suspicious strangers...</span>
+                </div>
+                <div class="flextext_borderless">
+                    <figure>
+                        <img src="images/works_OpenGL/3d_scene_2.png" alt ="wintercarnival screenshot">
+                        <figcaption>scene overview</figcaption>
+                    </figure>
+                </div>
+                <p class="break_row"></p>
+
+                <!--split-->
+                <div class="flextext_borderless">
+                    <figure>
+                        <img src="images/works_OpenGL/3d_scene_6.png" alt ="wintercarnival screenshot">
+                        <figcaption>Taking damage from monster</figcaption>
+                    </figure>
+                </div>
+                <div class="flextext">
+                    <h3>How to play</h3>
+                    <p> - WASD </p>
+                    <p> - Mouse drag, scroll to look around, zoom </p>
+                    <p> - E to pick up items </p>
+                    <p> - Right click to drop items </p>
+                    <span> Find 3 lanterns and bring back to the house without getting killed by the Hilichurl monsters. </span>
+                    <span> You can only pick up 1 item at a time. </span>
+                </div>
+                <p class="break_row"></p>
+
+                 <!--split-->
+                 <div class="flextext_borderless">
+                    <figure>
+                        <img src="images/works_OpenGL/3d_scene_5.png" alt ="wintercarnival screenshot">
+                        <figcaption>Lumine seeing a sword and picks it up</figcaption>
+                    </figure>
+                </div>
+                <div class="flextext_borderless">
+                    <figure>
+                        <img src="images/works_OpenGL/3d_scene_4.png" alt ="wintercarnival screenshot">
+                        <figcaption>sword magically floats behind lumine when picked up</figcaption>
+                    </figure>
+                </div>
+                <p class="break_row"></p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="flextext">
+        <h3>Get in touch</h3>
+        <br>
+        <p><b>Email</b> : yhghostgame@gmail.com</p>
+        <p><b>Discord</b> : yhghost</p>
+        <br>
+        <!--
+        <img class="logo" src="./images/logo/twitter.png" alt="twitterlogo">
+        <img class="logo" src="./images/logo/youtube.jpg" alt="youtubelogo">
+        <img class="logo" src="./images/logo/instagram.png" alt="instagramlogo">
+        -->
+
+    </footer>
+</body>
+</html>

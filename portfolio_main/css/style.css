@@ -1,0 +1,458 @@
+body {
+    background:rgb(0,3,12);
+}
+
+/*CUBE FOR PIXEL ART PAINTING*/
+.cube{
+    background-color:rgb(255, 255, 255);
+    width: 25px;
+    height: 25px;
+
+    padding: 0;
+    margin:0;
+
+    border: 2px dashed black;
+}
+
+/*COLOUR PICKERS*/
+.colour_picker {
+    width: 25px;
+    height: 25px;
+
+    padding: 0;
+    margin:0;
+}
+#red_colour_picker {
+    background-color:rgb(255, 0, 0);
+}
+#green_colour_picker {
+    background-color:rgb(0, 255, 0);
+}
+#blue_colour_picker {
+    background-color:rgb(0, 0, 255);
+}
+#darken_colour_picker {
+    background-color:rgb(0, 0, 0);
+}
+#white_colour_picker {
+    background-color:rgb(178, 178, 178);
+}
+/**/
+
+
+.break_row {
+    flex-basis: 100%;
+    /*height:0;*/
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+}
+
+
+/* General setting for everything */
+*{
+    padding: 0;
+    margin: 0;
+
+    box-sizing: border-box;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    
+    /*SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif*/
+}
+
+html, body{
+    padding: 0;
+    margin:0;
+}
+
+p, span{font-size: 18px;}
+h1     {font-size: 42px;}
+h2     {font-size: 38px;}
+h3     {font-size: 34px;}
+h4     {font-size: 30px;}
+h5     {font-size: 26px;}
+h6     {font-size: 22px;}
+
+
+
+/*Updated one*/
+/* Applying background for navigation bar */
+header{
+    width:100%;
+    position:fixed;
+    z-index: 10;
+}
+
+
+/* Placing of items in the navigation container */
+.nav-con{
+    background-color: grey;
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /*align-items: left;*/
+    padding:0 20px 0 40px; 
+
+}
+
+/* Tweak and edit sizes and placement of items and space within the navigation bar */
+nav ul{
+    list-style-type: none;
+    display:flex;
+    flex-wrap:wrap;
+    text-align: center;
+    font-family: 'Poor Richard';
+    width:100%;
+    justify-content: center; /*Align self at center*/
+
+}
+
+nav ul a{
+    font-size:20px;
+    width:max-content;
+    color:white;
+    text-decoration: none;
+    padding:38px 48px;
+
+    font-weight: bold;
+    justify-content: center;
+}
+/* Ensure :hover color stays when hovering over other dropdown areas */
+nav ul a:hover, .Nav-drop:hover .Drop{
+    color:black;
+
+    background-color: rgb(255, 255, 255);
+    text-decoration: underline;
+}
+
+/* Hover-Drop */
+.Drop{
+    display:inline-block;
+}
+
+.Drop-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    min-width: 10%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 20;
+
+}
+  
+.Drop-content a {
+    color: black;
+    width:100%;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+  
+.Drop-content a:hover {
+    color:black;
+    background-color: rgb(228, 228, 228);
+    font-weight: bold;
+    text-decoration: underline;
+}
+  
+.Nav-drop:hover .Drop-content{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+}
+
+
+
+/*HAMBURGER ICON*/
+#hamburger {
+    position:relative;
+    display: none;
+
+    padding: 1vh;
+    border: 1px grey;
+
+    width:6vh;
+
+    background-color: black;
+}
+
+#hamburger .bar {
+    width: 100%;
+    height: 5px;
+
+    display: block;
+    background-color: aliceblue;
+    margin: 6px 0px;
+
+    transition: 0.4s;
+}
+
+#hamburger.is-active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-8px, 6px);
+}
+#hamburger.is-active .bar:nth-child(2) {
+    opacity: 0;
+}
+#hamburger.is-active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-9px, -8px);
+}
+
+@media screen and (max-width:800px){
+    #hamburger {display:block;}/*unhide menu icon*/
+    nav ul {display:none;}/*Hide the menu item list*/
+
+    nav ul li {
+        display: block;
+        background-color: black;
+        width: 100%;
+    }/*Make a menu items verticals*/
+}
+.menuHide{
+    display: block;
+}
+
+
+
+/*HERO TEXT & BANNER*/
+.hero-banner {
+    text-align: right;
+    position: relative;
+    /*position: absolute;*/
+    top: 40vh;
+    right: 3vh;
+
+    color: white;
+}
+
+/*Applied to the banner-text to make it fade in*/
+.fade-in {
+    opacity: 1;
+    transform: translateY(0); /*Translate itself to original position*/
+}
+
+
+/**/
+.break_row{
+    flex-basis: 100%;
+    height: 0;
+}
+.break_column{
+    flex-basis: 100%;
+    width: 0;
+}
+
+img.background{
+    position:fixed;
+
+    height: 100%;
+    width: auto;
+
+    z-index: -1;
+}
+
+.content {
+    display:flex;
+    flex-wrap: wrap;
+
+    padding-top: 20%;
+    padding-bottom: 5%;
+    /*border: 4px solid black;*/
+
+    width: auto;
+}
+
+.content div.empty{
+    flex:1;
+    min-height: 200px;
+
+    flex-basis: 100%;
+    border: 0px white;
+    
+}
+.content div.hero_empty{
+    flex:1;
+    min-height: 700px;
+
+    flex-basis: 100%;
+    border: 0px white;
+    
+}
+
+.content div.flex, .content div.flextext, .content div.flextext_borderless {
+    flex:1;
+
+    background-color:rgb(255, 255, 255);
+    color :#335165;
+
+    /*
+    padding: 1vh 2.4vh; top/bottom, left/right
+    margin: 1vh 2vh; top/bottom, left/right
+    */
+
+    padding: 8vh;
+
+    text-align: center;
+    justify-content: center;
+}
+/*This has no padding/margin, meant for images*/
+.content div.flextext_borderless {
+    border:none;
+    padding: 0vh 0vh; /*top/bottom, left/right*/
+    margin: 0vh 0vh; /*top/bottom, left/right*/
+}
+/*Has wrapping unlike flextext which is meant for span (no wrapping)*/
+.content div.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+figure img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/*Flip cards*/
+.flip-card {
+    background-color: transparent;
+    width: 30rem;
+    height: 30rem;
+
+    margin:4vh;
+}
+  
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+ }
+  
+.flip-card.is-flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+  
+.flip-card-front, .flip-card-back {
+    position: absolute;
+
+    height: 100%;
+    width: 100%;
+    
+    backface-visibility: hidden;
+
+}
+/*Content inside flipcard*/
+.flip-card-front > div, .flip-card-back > div {
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+
+.flip-card-front > div > * {
+    text-align: center;
+}
+
+.flip-card-front img{
+    max-width: 100%;
+    height:100%;
+    object-fit: cover;
+
+    display:block;
+    position:relative;
+
+    justify-content: center;
+    align-self:center;
+}
+
+.qr-code {
+    width:24vh;
+    height:24vh;
+}
+  
+.flip-card-back {
+    background-color: #335165;
+    color: white;
+    transform: rotateY(180deg);
+
+    width: 100%;
+}
+/*End Flip cards*/
+
+
+footer img.logo{
+    float:left;
+
+    margin:0 5px;
+    border-radius: 40%;
+    object-fit: cover;
+    height: 8vh;
+    width: 8vh;
+}
+
+footer{
+    flex:1;
+
+    background-color:rgb(255, 255, 255);
+    color :#335165;
+
+    /*
+    padding: 1vh 2.4vh; top/bottom, left/right
+    margin: 1vh 2vh; top/bottom, left/right
+    */
+
+    padding-top: 2vh;
+    padding-bottom: 16vh;
+    padding-left: 2vh;
+
+    text-align: center;
+    justify-content: center;
+}
+
+/*APPLY TO BOTH TABLET AND MOBILES */
+@media screen and (max-width: 800px){
+    /*To Always show flip card front*/
+    /*Make all arrange in column*/
+    .content div.flex, .content div.flextext, .content div.flextext_borderless{
+        flex-basis: 100%;
+    }
+
+    /*nav*/
+    nav ul a{
+        padding:3vw 4vw;
+    }
+    
+    /* Ensure :hover color stays when hovering over other dropdown areas */     
+    .Nav-drop:hover .Drop-content{
+        display:none;
+    }
+
+    /*To enlarge flip-card*/
+    .flip-card{
+        height: 80vw;
+        width: 80vw;
+
+        margin:0;
+        margin-top: 1vw;;
+    }    
+}
+/*MOBILE PHONES*/
+@media screen and (max-width: 540px){
+
+    /*Make the side less padding to enlarge content*/
+    #content {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+
