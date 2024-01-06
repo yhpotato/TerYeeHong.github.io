@@ -205,7 +205,9 @@ nav ul a:hover, .Nav-drop:hover .Drop{
 
 @media screen and (max-width:800px){
     #hamburger {display:block;}/*unhide menu icon*/
-    nav ul {display:none;}/*Hide the menu item list*/
+
+    /*
+    nav ul {display:none;}Hide the menu item list
 
     nav ul li {
         display: block;
@@ -426,15 +428,15 @@ footer{
         flex-basis: 100%;
     }
 
-    /*nav*/
+    /*nav
     nav ul a{
         padding:3vw 4vw;
-    }
+    }*/
     
-    /* Ensure :hover color stays when hovering over other dropdown areas */     
+    /* Ensure :hover color stays when hovering over other dropdown areas      
     .Nav-drop:hover .Drop-content{
         display:none;
-    }
+    }*/
 
     /*To enlarge flip-card*/
     .flip-card{
