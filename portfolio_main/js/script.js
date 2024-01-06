@@ -44,12 +44,12 @@ page3btn.addEventListener("click", function(){
 page4btn.addEventListener("click", function(){
     show(4);
 });
+*/
 
 //hamburger menu
 //const hamBtn=document.querySelector("#hamIcon");
 //hamBtn.addEventListener("click", toggleMenus);
 const menuItemsList=document.querySelector("nav ul");
-
 
 const hamBtn=document.querySelector("#hamburger");
 hamBtn.addEventListener("click", toggleMenus);
@@ -62,7 +62,7 @@ function toggleMenus(){
     //    menuItemsList.style.display="none";
     //else menuItemsList.style.display="block";
 }
-
+/*
 
 ////////////////////
 //PAGE 1
