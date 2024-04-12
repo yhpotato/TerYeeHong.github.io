@@ -56,6 +56,22 @@
         updateBannerVisibility();
       }
 
+
+	//FUNCTION ADDED BY YEEHONG TO RESIZE CANVAS FOR UI PROPORTION
+function resizeCanvas() {
+canvas = document.getElementById("c");
+gl = canvas.getContext("webgl");
+var width = canvas.clientWidth;
+var height = canvas.clientHeight;
+if (canvas.width != width ||canvas.height != height) 
+{
+canvas.width = width;
+canvas.height = height;
+
+gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
+}
+}
+
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/build_macobun_v1_1.loader.js";
       var config = {
@@ -81,7 +97,13 @@
 
         var meta = document.createElement('meta');
         meta.name = 'viewport';
-        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+        //meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+
+	
+	//Code by Yeehong to hopefully resize the canvas to fit the game instead of the web view
+	var ratio = device-width / 300;
+	meta.content = 'width=device-width, height=ratio * 400, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+
         document.getElementsByTagName('head')[0].appendChild(meta);
         container.className = "unity-mobile";
         canvas.className = "unity-mobile";
