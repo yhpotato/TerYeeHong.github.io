@@ -1,4 +1,4 @@
-const cacheName = "DefaultCompany-McServe-1.0";
+const cacheName = "fyp_team_6-McDash-1.0";
 const contentToCache = [
     "Build/BuildYH.loader.js",
     "Build/BuildYH.framework.js",
